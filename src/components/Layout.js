@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Calculator from './Calculator'
 
 export default class Layout extends Component {
   constructor() {
@@ -9,6 +10,8 @@ export default class Layout extends Component {
     return (
       <div className='container'>
         <h1 className='text-center'>React Calculator</h1>
+        <br />
+        <Calculator />
       </div>
     )
   }
