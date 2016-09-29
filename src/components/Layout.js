@@ -27,9 +27,9 @@ export default class Layout extends Component {
 
   _onChange() {
     this.setState({
-      operand: //getAllNums
-      operation: //getOperation
-      total: //getTotal
+      operand: '',//getAllNums
+      operation: '',//getOperation
+      total: ''//getTotal
     })
   }
 
