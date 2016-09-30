@@ -3,6 +3,28 @@ import { EventEmitter } from 'events'
 
 class ValueStore extends EventEmitter {
 
+  let operands = []
+
+  constructor() {
+    super()
+
+    AppDispatcher.register(action => {
+      switch(action.type) {
+        case: 'RECEIVE_NUMS':
+        operands = action.nums
+        this.emoit('CHANGE');
+        break;
+      }
+    })
+
+
+
+
+
+
+
+  }
+
   startListening(cb) {
     this.on('CHANGE', cb)
   }
