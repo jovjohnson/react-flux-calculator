@@ -12,16 +12,10 @@ class ValueStore extends EventEmitter {
       switch(action.type) {
         case: 'RECEIVE_NUMS':
         operands = action.nums
-        this.emoit('CHANGE');
+        this.emit('CHANGE');
         break;
       }
     })
-
-
-
-
-
-
 
   }
 
