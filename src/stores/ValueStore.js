@@ -1,6 +1,9 @@
 import AppDispatcher from '../AppDispatcher'
 import { EventEmitter } from 'events'
 
+
+let _nums = '';
+
 class ValueStore extends EventEmitter {
 
   constructor() {
@@ -9,11 +12,10 @@ class ValueStore extends EventEmitter {
     AppDispatcher.register(action => {
       switch(action.type) {
         case 'RECEIVE_NUMS':
-        let operands = action.nums
+        _nums = _nums + action.nums
         this.emit('CHANGE');
         break;
       }
-
       console.log(action);
     })
 
@@ -28,7 +30,7 @@ class ValueStore extends EventEmitter {
   }
 
   getNumbers() {
-    return _operand;
+    return _nums;
   }
 }
 

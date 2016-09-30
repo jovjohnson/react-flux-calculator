@@ -9,7 +9,7 @@ export default class Layout extends Component {
     super(props);
 
     this.state = {
-      operand: '',
+      operand: ValueStore.getNumbers(),
       operation: '',
       total: ''
     }
@@ -27,10 +27,12 @@ export default class Layout extends Component {
 
   _onChange() {
     this.setState({
-      operand: '',//getAllNums
+      operand: ValueStore.getNumbers(), //getAllNums
       operation: '',//getOperation
       total: ''//getTotal
     })
+
+    console.log('state', this.state);
   }
 
   render() {
