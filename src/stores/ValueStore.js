@@ -3,18 +3,18 @@ import { EventEmitter } from 'events'
 
 class ValueStore extends EventEmitter {
 
-  let operands = []
-
   constructor() {
     super()
 
     AppDispatcher.register(action => {
       switch(action.type) {
-        case: 'RECEIVE_NUMS':
-        operands = action.nums
+        case 'RECEIVE_NUMS':
+        let operands = action.nums
         this.emit('CHANGE');
         break;
       }
+
+      console.log(action);
     })
 
   }

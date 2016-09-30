@@ -3,7 +3,7 @@ import AppDispatcher from '../AppDispatcher'
 const CalcActions = {
   receiveNums(nums) {
     AppDispatcher.dispatch({
-      type: 'RECEIVE NUMS'
+      type: 'RECEIVE NUMS',
       nums
     })
   }
